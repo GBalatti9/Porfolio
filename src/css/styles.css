@@ -1,0 +1,25 @@
+.visible {
+    z-index: 100;
+}
+
+.hidden {
+    z-index: 0;
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+
+    85%{
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 0;
+    }
+}
+
+.fade-out-animation {
+    animation: fade-out 3.5s ease-in-out forwards;
+}
