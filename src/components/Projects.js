@@ -58,6 +58,7 @@ function Projects() {
 
                 <StickyNote
                     projectName={'Faro Digital'}
+                    projectDescription={'Esta campaña gano el primer puesto en el LIAISONS 2023'}
                     backgroundImage={require('../assets/imgs/farodigital.jpeg')}
                     videos={[require('../assets/videos/FaroDigital.mp4')]}
                 />
