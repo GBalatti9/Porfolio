@@ -43,8 +43,7 @@ function StickyNote({ brand, projectName, videos, backgroundImage, photos, proje
     return (
         <>
             <div
-                className={`w-60 h-40 relative m-10 p-6 rounded-md hover:shadow-[0_2px_5px_rgb(0,0,0)] hover:cursor-pointer overflow-hidden ${isOpen ? 'bg-yellow-200' : ''
-                    }`}
+                className={`w-60 h-40 relative m-10 p-6 rounded-md hover:shadow-[0_2px_5px_rgb(0,0,0)] hover:cursor-pointer overflow-hidden ${isOpen ? 'bg-yellow-200' : ''}`}
                 onClick={togglePopUp}
                 onMouseEnter={toggleHover}
                 onMouseLeave={toggleHover}
@@ -64,8 +63,8 @@ function StickyNote({ brand, projectName, videos, backgroundImage, photos, proje
                     style={{ zIndex: zIndex + 11 }}
                 >
                     {/* Incrementa el z-index en 11 cuando está abierto */}
-                    <div className="h-4/5 bg-yellow-200 w-screen relative rounded-lg sm:overflow-hidden sm:w-4/5 shadow-lg flex flex-col">
-                        <div className="image-container w-full h-4/5 my-auto flex items-center flex-col justify-center sm:w-4/5 sm:relative sm:mx-auto">
+                    <div className="h-screen sm:h-4/5 bg-yellow-200 w-screen relative sm:rounded-lg sm:overflow-hidden sm:w-4/5 shadow-lg flex flex-col">
+                        <div className="image-container w-full h-4/5 my-auto flex items-center flex-col justify-center sm:w-4/5 sm:mx-auto">
                             <h2 className="text-2xl font-bold text-center pb-2">{projectName}</h2>
                             <p className="text-center pb-4 w-4/5">{projectDescription}</p>
                             {videos && videos.length > 0 ? (
@@ -85,6 +84,12 @@ function StickyNote({ brand, projectName, videos, backgroundImage, photos, proje
                                     <img src={photos[currentPhotoIndex]} alt={projectName} className="m-auto h-3/4 sm:h-3/4 rounded-lg" />
                                 )
                             )}
+                            <button
+                                className="absolute bottom-2 right-2 md:bottom-5 md:right-5 bg-white px-4 py-2 rounded-md shadow-md text-sm"
+                                onClick={() => {}}
+                            >
+                                Volver
+                            </button>
                         </div>
                     </div>
                 </div>
