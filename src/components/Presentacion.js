@@ -3,7 +3,7 @@ import React from 'react';
 
 function Presentacion({ videoRef }) {
     return (
-        <div className='contenedor-presentacion relative flex flex-col items-center justify-center p-10 h-[calc(100vh-80px)] sm:flex-row z-0'>
+        <div className='contenedor-presentacion relative flex flex-col items-center justify-center p-10 h-[calc(100vh-80px)] sm:flex-row z-100'>
             <video className='fondo-video absolute top-0 left-0 w-full h-full object-cover blur-sm z-0' autoPlay loop muted ref={videoRef}>
                 <source src='' type='video/mp4' />
             </video>

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import videoIntroduction from '../assets/videos/Introduction.mp4';
+import videoIntroduction from '../assets/videos/MadMenOpeningCreditsHD.mp4';
 import '../css/styles.css';
 
 const Introduction = () => {

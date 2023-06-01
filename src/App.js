@@ -1,33 +1,36 @@
-import React, { useRef } from 'react';
+import React from 'react';
+import './css/FullScreenAnimation.css';
 import './App.css';
 import './css/google-fonts.css';
 import 'tailwindcss/tailwind.css';
 import Header from './components/Header';
 import Presentacion from './components/Presentacion';
 import Projects from './components/Projects';
-import Introduction from './components/Introduction';
-import videoFile from './assets/videos/PatydeCancha.mp4';
+import videoFile from './assets/videos/MadMenOpeningCreditsHD.mp4';
 import SobreMi from './components/SobreMi';
 import Footer from './components/Footer';
+import FullscreenAnimation from './components/FullScreenAnimation';
 
 function App() {
-  const videoRef = useRef(null);
-
   return (
     <div className="App bg-slate-300">
-      <Introduction />
+      <FullscreenAnimation />
       <video className="fondo-video absolute top-0 left-0 w-full h-full object-cover blur-sm" autoPlay loop muted>
         <source src={videoFile} type="video/mp4" />
       </video>
-      <Header videoRef={videoRef} style={{ zIndex: 2 }} />
-      <Presentacion videoRef={videoRef} style={{ zIndex: 2 }} />
+      <div className="header-container">
+        <Header />
+      </div>
+      <div className="presentacion-container">
+        <Presentacion />
+      </div>
 
       <section id="proyectos">
         <Projects />
       </section>
 
       <section id="sobre-mi">
-      <SobreMi />
+        <SobreMi />
       </section>
 
       <section id="footer">
