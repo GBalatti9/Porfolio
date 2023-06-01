@@ -13,7 +13,7 @@ import FullscreenAnimation from './components/FullScreenAnimation';
 
 function App() {
   return (
-    <div className="App bg-slate-300">
+    <div className="App bg-slate-400">
       <FullscreenAnimation />
       <video className="fondo-video absolute top-0 left-0 w-full h-full object-cover blur-sm" autoPlay loop muted>
         <source src={videoFile} type="video/mp4" />
